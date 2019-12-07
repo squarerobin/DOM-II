@@ -44,3 +44,20 @@ images.forEach(
 
     }
 );
+
+//onclick
+
+let btns = document.querySelectorAll(".btn");
+btns.forEach(
+    function(btn){
+
+        btn.addEventListener('click', (e) => {
+            
+            btn.parentElement.style.display = "none";
+            //e.preventDefault();
+        });
+
+
+    }
+);
+

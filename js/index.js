@@ -61,3 +61,13 @@ btns.forEach(
     }
 );
 
+// dblclick
+
+//stop navigation items from refreshing the page
+navLink.forEach(function(link){
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+    });
+});
+

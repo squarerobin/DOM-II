@@ -62,6 +62,14 @@ btns.forEach(
 );
 
 // dblclick
+let imgs = document.querySelectorAll("img");
+imgs.forEach(function (image) {
+    image.addEventListener('dblclick', function(){
+        image.style.border = "2px dashed orange";
+        image.style.padding = "1em";
+        image.style.borderRadius = "50%";
+    });
+});
 
 //stop navigation items from refreshing the page
 navLink.forEach(function(link){

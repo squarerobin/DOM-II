@@ -103,16 +103,13 @@ const parrs = document.querySelectorAll('p');
 parrs.forEach(function (par) {
     let scale = 1;
     par.addEventListener('wheel', function (e) {
+
         e.preventDefault();
-    
-        scale += event.deltaY * -0.01;
-    
-        // Restrict scale
-        scale = Math.min(Math.max(0.125, scale), 4);
-    
-        // Apply scale transform
+
+        scale += event.deltaY * 0.01;
+        scale = Math.min(Math.max(0.2, scale), 5);
         par.style.transform = `scale(${scale})`;
-    
+
     });
 
 });

@@ -33,7 +33,7 @@ images.forEach(
             //console.log("onmouseenter");
             image.style.transform = "scale(1.1)";
             image.style.transition = "transform 0.3s";
-            
+
 
         });
         image.addEventListener('mouseleave', () => {
@@ -48,7 +48,7 @@ images.forEach(
 
 //onclick
 let destination = document.querySelectorAll("div.destination");
-destination.forEach(function(div){
+destination.forEach(function (div) {
     div.addEventListener('click', (e) => {
         div.style.backgroundColor = "yellow";
         div.style.borderRadius = "20px";
@@ -60,10 +60,10 @@ destination.forEach(function(div){
 
 let btns = document.querySelectorAll(".btn");
 btns.forEach(
-    function(btn){
+    function (btn) {
 
         btn.addEventListener('click', (e) => {
-            
+
             btn.style.backgroundColor = "orange";
             e.stopPropagation(); //demostrating how to counter the "bubbling" and how stop propagation works 
         });
@@ -75,7 +75,7 @@ btns.forEach(
 // dblclick
 let imgs = document.querySelectorAll("img");
 imgs.forEach(function (image) {
-    image.addEventListener('dblclick', function(){
+    image.addEventListener('dblclick', function () {
         image.style.border = "2px dashed orange";
         image.style.padding = "1em";
         image.style.borderRadius = "50%";
@@ -86,20 +86,45 @@ imgs.forEach(function (image) {
 // auxclick
 
 let pars = document.querySelectorAll("p");
-pars.forEach(function (par){
-    par.addEventListener('auxclick', function(){
+pars.forEach(function (par) {
+    par.addEventListener('auxclick', function () {
         par.style.color = "dodgerblue";
     });
 });
 
+// wheel
+
+
+
+const parrs = document.querySelectorAll('p');
+
+
+
+parrs.forEach(function (par) {
+    let scale = 1;
+    par.addEventListener('wheel', function (e) {
+        e.preventDefault();
+    
+        scale += event.deltaY * -0.01;
+    
+        // Restrict scale
+        scale = Math.min(Math.max(0.125, scale), 4);
+    
+        // Apply scale transform
+        par.style.transform = `scale(${scale})`;
+    
+    });
+
+});
 
 
 //stop navigation items from refreshing the page
-navLink.forEach(function(link){
+navLink.forEach(function (link) {
     link.addEventListener('click', (e) => {
         e.preventDefault();
 
     });
 });
 
-// note: 7 handlers so far
+
+// note: 8 handlers so far

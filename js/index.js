@@ -82,6 +82,18 @@ imgs.forEach(function (image) {
     });
 });
 
+
+// auxclick
+
+let pars = document.querySelectorAll("p");
+pars.forEach(function (par){
+    par.addEventListener('auxclick', function(){
+        par.style.color = "dodgerblue";
+    });
+});
+
+
+
 //stop navigation items from refreshing the page
 navLink.forEach(function(link){
     link.addEventListener('click', (e) => {
@@ -90,3 +102,4 @@ navLink.forEach(function(link){
     });
 });
 
+// note: 7 handlers so far

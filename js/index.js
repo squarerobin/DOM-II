@@ -1,17 +1,18 @@
 // Your code goes here
-document.querySelector("header").style.zIndex = "2";
+document.querySelector("header").style.zIndex = "2"; // for aesthetic purposes (so the images don't cover the navbar when enlarged as a consecuence of the mouseover)
 
-// mouseenter and mouseleave
+// mouseover and mouseout
 
 let navLink = document.querySelectorAll("a.nav-link");
 navLink.forEach(
     function (link) {
+        // mouseover
         link.addEventListener('mouseover', () => {
             //console.log("Mouse has entered a nav link");
             link.style.textDecoration = "underline orange 2px";
         });
 
-        // mouseleaves
+        // mouseout
         link.addEventListener('mouseout', () => {
             //console.log("Mouse has left a nav link");
             link.style.textDecoration = "none";
@@ -22,7 +23,7 @@ navLink.forEach(
 
 
 
-// transform - scale images onmouseover
+// transform - scale images onmouseenter onmouseleave
 
 
 let images = document.querySelectorAll(".img-content img");
@@ -46,6 +47,16 @@ images.forEach(
 );
 
 //onclick
+let destination = document.querySelectorAll("div.destination");
+destination.forEach(function(div){
+    div.addEventListener('click', (e) => {
+        div.style.backgroundColor = "yellow";
+        div.style.borderRadius = "20px";
+        div.style.padding = "1em 2em";
+
+    });
+
+});
 
 let btns = document.querySelectorAll(".btn");
 btns.forEach(
@@ -53,8 +64,8 @@ btns.forEach(
 
         btn.addEventListener('click', (e) => {
             
-            btn.parentElement.style.display = "none";
-            //e.preventDefault();
+            btn.style.backgroundColor = "orange";
+            e.stopPropagation(); //demostrating how to counter the "bubbling" and how stop propagation works 
         });
 
 

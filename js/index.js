@@ -114,6 +114,13 @@ parrs.forEach(function (par) {
 
 });
 
+// keydown - logs to the console pressed keys
+
+document.addEventListener('keydown', function(e){
+    console.log(` ${e.code}`);
+});
+
+
 
 //stop navigation items from refreshing the page
 navLink.forEach(function (link) {
@@ -124,4 +131,4 @@ navLink.forEach(function (link) {
 });
 
 
-// note: 8 handlers so far
+// note: 9 handlers so far

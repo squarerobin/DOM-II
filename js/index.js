@@ -134,4 +134,6 @@ navLink.forEach(function (link) {
 });
 
 //stretch: greensock animation
-gsap.to(".bus", {duration: 20, x: 1000});
+let bus = document.querySelector('.bus');
+bus.style.po
+gsap.to(".bus", {duration: 40, x: 2000});

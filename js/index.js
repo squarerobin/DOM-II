@@ -131,4 +131,3 @@ navLink.forEach(function (link) {
 });
 
 
-// note: 9 handlers so far

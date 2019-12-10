@@ -1,7 +1,8 @@
 /* import { gsap } from "gsap"; */
 
+
 // Your code goes here
-document.querySelector("header").style.zIndex = "2"; // for aesthetic purposes (so the images don't cover the navbar when enlarged as a consecuence of the mouseover)
+document.querySelector("header").style.zIndex = "1"; // for aesthetic purposes (so the images don't cover the navbar when enlarged as a consecuence of the mouseover)
 
 // mouseover and mouseout
 
@@ -132,8 +133,5 @@ navLink.forEach(function (link) {
     });
 });
 
-
-let bus = document.querySelector(".bus");
-
-bus.zIndex = -1;
-gsap.to(bus, {duration: 20, x: 1000});
+//stretch: greensock animation
+gsap.to(".bus", {duration: 20, x: 1000});

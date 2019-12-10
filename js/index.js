@@ -75,7 +75,7 @@ btns.forEach(
 // dblclick
 let imgs = document.querySelectorAll("img");
 imgs.forEach(function (image) {
-    image.addEventListener('dblclick', function () {
+    image.addEventListener('dblclick', () => {
         image.style.border = "2px dashed orange";
         image.style.padding = "1em";
         image.style.borderRadius = "50%";
@@ -87,7 +87,7 @@ imgs.forEach(function (image) {
 
 let pars = document.querySelectorAll("p");
 pars.forEach(function (par) {
-    par.addEventListener('auxclick', function () {
+    par.addEventListener('auxclick', () => {
         par.style.color = "dodgerblue";
     });
 });
@@ -102,7 +102,7 @@ const parrs = document.querySelectorAll('p');
 
 parrs.forEach(function (par) {
     let scale = 1;
-    par.addEventListener('wheel', function (e) {
+    par.addEventListener('wheel', (e) => {
 
         e.preventDefault();
 
@@ -116,7 +116,7 @@ parrs.forEach(function (par) {
 
 // keydown - logs to the console pressed keys
 
-document.addEventListener('keydown', function(e){
+document.addEventListener('keydown', (e) => {
     console.log(` ${e.code}`);
 });
 

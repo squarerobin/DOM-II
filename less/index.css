@@ -194,10 +194,6 @@ img {
     padding-top: 10px;
   }
 }
-.main-navigation .nav-container .bus {
-  position: absolute;
-  left: 0;
-}
 @media (max-width: 500px) {
   .main-navigation .nav-container .logo-heading {
     font-size: 3rem;
